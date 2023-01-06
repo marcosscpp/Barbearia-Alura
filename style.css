@@ -8,20 +8,14 @@ header {
 }
 
 .caixa {
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22%;
 }
 
 .logotipo {
     filter: drop-shadow(0 0 10px #FFB800);
-}
-
-
-nav {
-    position: absolute;
-    top: 110px;
-    right: 0;
 }
 
 nav li {
@@ -30,15 +24,16 @@ nav li {
 }
 
 nav a {
+    
     text-transform: uppercase;
-    color: #000000;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 28px;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: red;
+    filter: drop-shadow(0 0 10px #FFB800);
 }
 
 nav a:active {
@@ -46,17 +41,16 @@ nav a:active {
 }
 
 .produtos {
+    display: flex;
+    justify-content: space-between;
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;
 }
 
 .produtos li {
-    display: inline-block;
     text-align: center;
     width: 30%;
-    vertical-align: top;
-    margin: 0 1.5%;
     padding: 30px 20px;
     box-sizing: border-box;
     border: 3px solid #000000;
@@ -64,7 +58,7 @@ nav a:active {
 }
 
 .produtos li:hover {
-    border-color:#0000FF
+    border-color:#0000FF;
 }
 
 .produtos li:active {
@@ -279,6 +273,11 @@ footer {
         height: 260px;
         background: linear-gradient(red, blue);
     }
+
+    .caixa {
+        flex-direction: column;
+    }
+
     .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
         width: auto;
     }
@@ -321,8 +320,10 @@ footer {
     }
 
     .produtos {
+        flex-direction: column;
         width: auto;
         padding: 0;
+
     }
 
     .produtos li {
@@ -342,5 +343,5 @@ footer {
 
     table{
         margin: 50px auto; 
-    }   
+    }    
 }
